@@ -1,0 +1,37 @@
+
+<!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.4.3.payara-p2 
+(PAYARA-3579-ff11a82; 2019-03-07T10:51:27+0530) JAXWS-RI/2.3.2 JAXWS-API/2.3.2 
+JAXB-RI/2.3.2 JAXB-API/2.3.2 git-revision#unknown. -->
+<xs:schema xmlns:tns="http://jde.croydon.com/"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0"
+           targetNamespace="http://jde.croydon.com/"
+           attributeFormDefault="unqualified" elementFormDefault="unqualified">
+        
+    <xs:element name="SendWebNotificationsRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="an8" type="xs:string" />
+                <xs:element name="operation" type="xs:string" />
+                <xs:element name="path" type="xs:string" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="SendWebNotificationsResponse">
+
+        <xs:complexType >
+            <xs:sequence>
+                <xs:element name="sendWebNotifications"
+                            type="tns:sendWebNotifications" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="sendWebNotifications">
+        <xs:sequence>
+            <xs:element name="an8" type="xs:string" />
+            <xs:element name="operation" type="xs:string" />
+            <xs:element name="path" type="xs:string" />
+            <xs:element name="return" type="xs:string" />
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
